@@ -3,13 +3,13 @@ resource "aws_vpc" "app-east" {
   cidr_block = "10.0.0.0/16"
 }
 
-resource "aws-vpc" "db-east" {
+resource "aws_vpc" "db-east" {
     provider = aws.east
     name = "${var.AWS_REGION_US_EAST}-vpc-db"
     cidr_block = "10.0.0.0/16"
 }
 
-resource "aws-vpc" "ec2-east" {
+resource "aws_vpc" "ec2-east" {
     provider = aws.east
     cidr_block = "10.0.0.0/16"
 }
@@ -19,12 +19,12 @@ resource "aws_vpc" "app-west" {
   cidr_block = "10.0.0.0/16"
 }
 
-resource "aws-vpc" "db-west" {
+resource "aws_vpc" "db-west" {
     provider = aws.west
     cidr_block = "10.0.0.0/16"
 }
 
-resource "aws-vpc" "ec2-west" {
+resource "aws_vpc" "ec2-west" {
     provider = aws.west
     cidr_block = "10.0.0.0/16"
 }
