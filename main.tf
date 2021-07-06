@@ -5,7 +5,6 @@ resource "aws_vpc" "app-east" {
 
 resource "aws_vpc" "db-east" {
     provider = aws.east
-    name = "${var.AWS_REGION_US_EAST}-vpc-db"
     cidr_block = "10.0.0.0/16"
 }
 
